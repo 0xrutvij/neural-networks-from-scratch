@@ -10,6 +10,7 @@ packages = [{ include = "nnfs", from = "src" }]
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
 numpy = "^1.23.5"
+pre-commit = "^2.20.0"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^5.0.4"
@@ -27,3 +28,9 @@ ipykernel = "^6.17.1"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = 'black'
