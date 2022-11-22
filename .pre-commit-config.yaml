@@ -33,3 +33,23 @@ repos:
       language_version: python3.10
       args: [--max-line-length=88]
       stages: [commit, push]
+
+
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 1.5.3
+  hooks:
+    - id: nbqa-black
+    - id: nbqa-mypy
+    - id: nbqa-pyupgrade
+      args: ["--py37-plus"]
+    - id: nbqa-isort
+      args: ["--float-to-top"]
+
+
+-   repo: local
+    hooks:
+    -   id: nbqa-blacken-docs
+        name: format markdown cells
+        entry: nbqa blacken-docs
+        language: python
+        types: [jupyter]
