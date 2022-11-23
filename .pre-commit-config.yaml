@@ -39,6 +39,7 @@ repos:
     hooks:
       - id: nbqa-black
       - id: nbqa-mypy
+        args: ["--ignore-missing-imports"]
       - id: nbqa-pyupgrade
         args: ["--py37-plus"]
       - id: nbqa-isort
@@ -53,6 +54,6 @@ repos:
     hooks:
       - id: nbqa-blacken-docs
         name: format markdown cells
-        entry: nbqa blacken-docs
+        entry: nbqa blacken-docs --nbqa-md
         language: python
         types: [jupyter]
