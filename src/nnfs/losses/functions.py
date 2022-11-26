@@ -20,7 +20,7 @@ class SquaredError(GenericLoss):
         sq_sum_errors: float = np.sum(np.square(y - o))
         # ss total
         sq_sum_diff_avg: float = np.sum(np.square(y - y_mean))
-        return 1 - (sq_sum_errors / sq_sum_diff_avg)
+        return np.round(1 - (sq_sum_errors / sq_sum_diff_avg), 4)
 
 
 @final
