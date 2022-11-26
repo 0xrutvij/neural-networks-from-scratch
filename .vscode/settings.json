@@ -1,23 +1,30 @@
 {
-    "editor.rulers": [
-        88
-    ],
-    "python.formatting.provider": "black",
-    "python.linting.enabled": true,
-    "python.linting.lintOnSave": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--max-line-length=88",
-        "--extend-ignore=E203,E501,W503",
-        "--exclude=.venv"
-    ],
-    "isort.args": [
-        "--profile=black"
-    ],
-    "[python]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        }
-    }
+  "editor.rulers": [88],
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": [
+    "--max-line-length=88",
+    "--extend-ignore=E203,E501,W503",
+    "--exclude=.venv"
+  ],
+  "python.linting.mypyEnabled": true,
+  "isort.args": ["--profile=black"],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.linting.mypyArgs": [
+    "--follow-imports=silent",
+    "--ignore-missing-imports",
+    "--show-column-numbers",
+    "--no-pretty",
+    "--"
+  ],
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll": true
+    },
+    "editor.formatOnSaveMode": "file"
+  }
 }
