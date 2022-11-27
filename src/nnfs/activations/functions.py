@@ -2,7 +2,7 @@
 Reference Links:
     - https://www.v7labs.com/blog/neural-networks-activation-functions#h4
     - https://en.wikipedia.org/wiki/Activation_function
-
+    - https://blog.paperspace.com/vanishing-gradients-activation-function/
 """
 from typing import final
 

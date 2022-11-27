@@ -1,3 +1,8 @@
+"""
+Reference Links:
+    - https://arxiv.org/pdf/1609.04747.pdf
+    - https://ruder.io/optimizing-gradient-descent/index.html
+"""
 from typing import Optional, final
 
 import numpy as np
