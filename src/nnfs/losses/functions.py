@@ -15,7 +15,7 @@ class SquaredError(GenericLoss):
 
     def accuracy(self, y: np.ndarray, o: np.ndarray) -> float:
         """R-Squared/Coeff of Determination"""
-        y_mean = np.mean(y, axis=-1, keepdims=True)
+        y_mean = np.mean(y, axis=0, keepdims=True)
         # ss residuals
         sq_sum_errors: float = np.sum(np.square(y - o))
         # ss total

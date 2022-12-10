@@ -29,11 +29,11 @@ class Preprocessing:
 
     @staticmethod
     def standard_scale(
-        d_train: np.ndarray, d_test: np.ndarray
-    ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
-        d_train_mean = np.mean(d_train, axis=-1, keepdims=True)
-        d_train_std = np.std(d_train, axis=-1, keepdims=True)
+        data: np.ndarray,
+    ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+        d_mean = np.mean(data, axis=0, keepdims=True)
+        d_std = np.std(data, axis=0, keepdims=True)
 
-        d_train = np.abs(d_train - d_train_mean) / d_train_std
-        d_test = np.abs(d_test - d_train_mean) / d_train_std
-        return d_train, d_test, d_train_mean, d_train_std
+        data = (data - d_mean) / d_std
+
+        return data, d_mean, d_std
